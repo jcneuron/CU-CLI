@@ -1,5 +1,7 @@
+//refers to the axios npm package
 const axios = require('axios');
-//obj
+//module.exports exposes the function object as a module
+//token is a headers object
 module.exports = function(url, body, token) {
 	axios
 		.post(url, body, { headers: { Authorization: token } })
@@ -10,6 +12,3 @@ module.exports = function(url, body, token) {
 			console.log(error);
 		});
 };
-
-// request.setRequestHeader('Authorization', '"pk_4235004_1QFR20XOHXEFJ4ZHXN2JYOVQFW0OQF56"');
-// request.setRequestHeader('Content-Type', 'application/json');
