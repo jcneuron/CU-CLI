@@ -1,0 +1,19 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "form-data": "^3.0.0",
+    "postman-request": "^2.88.1-postman.22",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
