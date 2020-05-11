@@ -1,7 +1,7 @@
 const argv = require('yargs').argv;
 // const FormData = require('form-data');
 const axios = require('axios');
-var request = require('request');
+var request = require('postman-request');
 const fs = require('fs');
 // const request = require('postman-request');
 

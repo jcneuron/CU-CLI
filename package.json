@@ -1,27 +1,28 @@
 {
-  "name": "clickup",
-  "version": "1.0.0",
-  "description": "command line interface using yargs to add task with clickup",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Juan",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "form-data": "^3.0.0",
-    "postman-request": "^2.88.1-postman.22",
-    "request": "^2.88.2",
-    "xmlhttprequest": "^1.8.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jcneuron/CU-CLI.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jcneuron/CU-CLI/issues"
-  },
-  "homepage": "https://github.com/jcneuron/CU-CLI#readme"
+	"name": "clickup",
+	"version": "1.0.0",
+	"description": "command line interface using yargs to add task with clickup",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Juan",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"form-data": "^3.0.0",
+		"fs": "0.0.1-security",
+		"postman-request": "^2.88.1-postman.22",
+		"xmlhttprequest": "^1.8.0",
+		"yargs": "^15.3.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jcneuron/CU-CLI.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jcneuron/CU-CLI/issues"
+	},
+	"homepage": "https://github.com/jcneuron/CU-CLI#readme"
 }
