@@ -29,17 +29,20 @@ var body = {
 
 yargs
 	.command({
-		// data: '{"name":"lol","content":"lol","tags":["tag name 1"],"status":"Open","priority":3}',
-		command: 'add <taskName> <taskContent>',
+		// '{"name":"Section 6","content":"description","tags":["tag"],"status":"Accepted","priority":2}',
+		// node index.js add 'Section 6' 'description' 'tag' 'Accepted' '2'
+		command: 'add <taskName> <taskContent> <[taskTag]> <taskStatus> <taskPri>',
 		desc: 'Create a new task on ClickUp',
 
 		handler: (argv) => {
 			body.name = argv.taskName;
 			body.content = argv.taskContent;
-			// body.status = argv.taskStatus;
-			// body.priority = argv.taskPri;
+			body.tags = [ argv.taskTag ];
+			body.status = argv.taskStatus;
+			body.priority = argv.taskPri;
 			postTask(url, body, token);
-			console.log('Created task ${argv.taskName} with description ${argv.taskContent}');
+			console.log('Creating task ' + argv.taskName);
+			setTimeout(function() {}, 10000);
 		}
 	})
 	.demandCommand(1, 'Please choose at least one command:')
