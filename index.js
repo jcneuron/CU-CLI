@@ -1,5 +1,6 @@
 //refers to yargs module
 const yargs = require('yargs');
+const chalk = require('chalk');
 
 //refers to js file
 const postTask = require('./clickup.js');
@@ -41,7 +42,7 @@ yargs
 			body.status = argv.taskStatus;
 			body.priority = argv.taskPri;
 			postTask(url, body, token);
-			console.log('Creating task ' + argv.taskName);
+			console.log(chalk.red('Creating task ' + argv.taskName));
 			setTimeout(function() {}, 10000);
 		}
 	})
