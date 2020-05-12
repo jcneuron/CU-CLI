@@ -2,7 +2,7 @@
 const axios = require('axios');
 //module.exports exposes the function object as a module
 //token is a headers object
-module.exports = function(url, body, token) {
+module.exports = (url, body, token) => {
 	axios
 		.post(url, body, { headers: { Authorization: token } })
 		.then(function(response) {
