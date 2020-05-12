@@ -18,39 +18,34 @@ const token = 'pk_4235004_1QFR20XOHXEFJ4ZHXN2JYOVQFW0OQF56';
 
 // body properties from https://jsapi.apiary.io/apis/clickup20/reference/0/tasks/create-task.html
 // Production / JavaScript;
+
 var body = {
-	name: 'taskName',
-	content: 'taskDesc',
-	tags: [ 'taskTag' ],
-	status: 'taskStatus',
+	name: 'New Task Name',
+	content: 'New Task Content',
+	tags: [ 'tag name 1' ],
+	status: 'Open',
 	priority: 3
 };
 
 yargs
 	.command({
-		command: 'add <taskName> <taskDesc>',
-		aliases: [ 'create' ],
+		// data: '{"name":"lol","content":"lol","tags":["tag name 1"],"status":"Open","priority":3}',
+		command: 'add <taskName> <taskContent>',
 		desc: 'Create a new task on ClickUp',
-		// builder: {
-		// 	body: {
-		// 		name: 'hi',
-		// 		status: 'Open'
-		// 	}
-		// },
+
 		handler: (argv) => {
-			// console.log('Created task ${argv.taskName} with description ${argv.taskDesc}');
 			body.name = argv.taskName;
-			body.content = argv.taskDesc;
-			// body.tags = argv.taskTag;
+			body.content = argv.taskContent;
 			// body.status = argv.taskStatus;
-			// body.priority = argv.num;
+			// body.priority = argv.taskPri;
 			postTask(url, body, token);
+			console.log('Created task ${argv.taskName} with description ${argv.taskContent}');
 		}
 	})
-	.demandCommand(1, 'Please choose at least one command')
+	.demandCommand(1, 'Please choose at least one command:')
 	.help()
 	.wrap(72).argv;
 
 //references and passes params to the function in index.js
 
-// yargs.parse();
+yargs.parse();
